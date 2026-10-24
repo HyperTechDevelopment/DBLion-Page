@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DBLion · the guarded AI database IDE</title>
+<meta name="description" content="DBLion is a desktop AI database IDE: Electron + React + TypeScript. Read-only by default, so the AI never executes.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-500-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/jetbrains-mono-400-latin.woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" role="banner">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="DBLion home">
+      <img src="assets/logo.png" alt="DBLion lion logo" width="32" height="32">
+      <span class="brand-name">DBLion</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav-links" aria-label="Primary">
+      <a href="#proof" data-i18n="nav.proof">App</a>
+      <a href="#install" data-i18n="nav.docs">Install</a>
+      <a href="#safety" data-i18n="nav.safety">Guard</a>
+      <a class="btn btn-ghost btn-sm" href="https://github.com/HyperTechDevelopment/DBLion" rel="noopener" data-i18n="nav.repo">GitHub repo</a>
+      <button id="lang-toggle" class="btn btn-ghost btn-sm" type="button" aria-label="Switch language / Trocar idioma" data-i18n="nav.lang">PT</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero wrap" id="top" aria-labelledby="hero-h1">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tick" aria-hidden="true"></span><span data-i18n="hero.eyebrow">v0.1.0 · Guarded AI database IDE · Windows x64</span></p>
+      <h1 id="hero-h1" data-i18n="hero.h1">The AI proposes. You execute.</h1>
+      <p class="lede" data-i18n="hero.sub">DBLion is a desktop AI database IDE: Electron + React + TypeScript. Read-only by default, one token, secrets in safeStorage. The AI never executes.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://github.com/HyperTechDevelopment/DBLion/releases/latest" rel="noopener" data-i18n="hero.cta.primary">Download v0.1.0</a>
+        <a class="btn btn-ghost" href="#install" data-i18n="hero.cta.secondary">Run it locally</a>
+      </div>
+      <p class="micro" data-i18n="hero.micro">7 engines · 14 built-in themes · MIT · Public repo, open source</p>
+      <div class="guard-line" aria-hidden="true">
+        <code class="chip">WHERE active = TRUE</code>
+        <span class="guard-seal">READ-ONLY</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <figure class="guard-stage">
+        <ol class="pipeline">
+          <li class="station station-proposal" aria-hidden="true"><code class="chip">SELECT id, name</code></li>
+          <li class="track track-live" aria-hidden="true"></li>
+          <li class="station station-gate" aria-hidden="true">
+            <svg class="shield" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M12 2.5 20 6v6c0 5-3.6 8.3-8 9.5C7.6 20.3 4 17 4 12V6l8-3.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <span class="guard-seal">READ-ONLY</span>
+            <span class="check" aria-hidden="true">✓</span>
+          </li>
+          <li class="track track-gated" aria-hidden="true"></li>
+          <li class="station station-result" aria-hidden="true">
+            <span class="mini-head">id · name</span>
+            <span class="mini-row"><i></i>1 · ana</span>
+            <span class="mini-row"><i></i>2 · bea</span>
+          </li>
+        </ol>
+        <figcaption class="sr-only" data-i18n="hero.figcap">Diagram of the guard: a SELECT statement leaves the proposal side, passes a READ-ONLY gate, and returns two rows on the gated side.</figcaption>
+        <noscript><img src="assets/hero.svg" alt="DBLion guard checkpoint: SQL proposal passing a READ-ONLY shield gate" width="520" height="300"></noscript>
+      </figure>
+    </div>
+  </section>
+
+  <div class="engines" role="region" aria-labelledby="eng-label" data-i18n-aria-label="eng.label.aria">
+    <p class="eng-label" id="eng-label" data-i18n="eng.label">Seven engines · one guard</p>
+    <ul class="eng-list">
+      <li class="eng-chip">PostgreSQL</li>
+      <li class="eng-chip">MySQL · MariaDB</li>
+      <li class="eng-chip">SQL Server</li>
+      <li class="eng-chip">Firebird</li>
+      <li class="eng-chip">SQLite</li>
+      <li class="eng-chip">MongoDB</li>
+      <li class="eng-chip">Redis</li>
+    </ul>
+  </div>
+
+  <!-- PROOF -->
+  <section class="section wrap railed" id="proof" aria-labelledby="proof-h2">
+    <p class="eyebrow"><span class="tick" aria-hidden="true"></span><span data-i18n="proof.eyebrow">Fullscreen screenshot</span></p>
+    <h2 id="proof-h2" data-i18n="proof.h2">The real app, fullscreen</h2>
+    <figure class="shot-full">
+      <img src="assets/dblion-app.png" alt="DBLion app window, fullscreen screenshot" data-i18n-alt="proof.cap.main" width="1120" height="640" loading="lazy">
+      <figcaption data-i18n="proof.cap.main">DBLion app window · fullscreen screenshot</figcaption>
+    </figure>
+    <div class="theme-grid">
+      <figure>
+        <img src="assets/theme-pycharm.png" alt="DBLion in PyCharm theme" data-i18n-alt="proof.cap.pycharm" width="520" height="320" loading="lazy">
+        <figcaption data-i18n="proof.cap.pycharm">PyCharm · built-in, no remote fetch</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/theme-solarized.png" alt="DBLion in Solarized Light theme" data-i18n-alt="proof.cap.solarized" width="520" height="320" loading="lazy">
+        <figcaption data-i18n="proof.cap.solarized">Solarized Light · built-in, no remote fetch</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/theme-neon.png" alt="DBLion in Neon theme" data-i18n-alt="proof.cap.neon" width="520" height="320" loading="lazy">
+        <figcaption data-i18n="proof.cap.neon">Neon · built-in, no remote fetch</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section wrap railed" id="features" aria-labelledby="feat-h2">
+    <p class="eyebrow"><span class="tick" aria-hidden="true"></span><span data-i18n="feat.eyebrow">What it is</span></p>
+    <h2 id="feat-h2" data-i18n="feat.h2">Guarded by design, multi-engine by fact</h2>
+    <div class="cards">
+      <article class="card">
+        <h3 data-i18n="feat.1t">Guarded AI loop</h3>
+        <p data-i18n="feat.1d">AI drafts SQL; only you execute. Read-only default, single token.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="feat.2t">7 engines</h3>
+        <p data-i18n="feat.2d">PostgreSQL · MySQL/MariaDB · SQL Server · Firebird · SQLite · MongoDB · Redis.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="feat.3t">14 built-in themes</h3>
+        <p data-i18n="feat.3d">Local only, no remote fetch. Shown: PyCharm, Solarized Light, Neon.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="feat.4t">Desktop stack</h3>
+        <p data-i18n="feat.4d">Electron + React + TypeScript, Windows x64 app, version 0.1.0 (pre-1.0).</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOW THE GUARD WORKS -->
+  <section class="section wrap railed gated" id="how" aria-labelledby="how-h2">
+    <p class="eyebrow"><span class="tick" aria-hidden="true"></span><span data-i18n="how.eyebrow">How the guard works</span></p>
+    <h2 id="how-h2" data-i18n="how.h2">Three moves, one human in charge</h2>
+    <ol class="flow">
+      <li>
+        <p class="flow-num" aria-hidden="true">01</p>
+        <h3 data-i18n="how.1t">AI proposes</h3>
+        <p data-i18n="how.1d">The copilot drafts SQL with live schema context. Text only, with no execution path.</p>
+      </li>
+      <li>
+        <p class="flow-num" aria-hidden="true">02</p>
+        <h3 data-i18n="how.2t">Guard checks</h3>
+        <p data-i18n="how.2d">Read-only fence, single-use token and native confirmation bind the exact statement.</p>
+      </li>
+      <li>
+        <p class="flow-num" aria-hidden="true">03</p>
+        <h3 data-i18n="how.3t">You execute</h3>
+        <p data-i18n="how.3d">Nothing runs without your action. Grants stay the final boundary.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- SAFETY STRIP -->
+  <section class="section wrap railed gated" id="safety" aria-labelledby="safe-h2">
+    <div class="safety">
+      <p class="eyebrow eyebrow-amber"><span class="tick" aria-hidden="true"></span><span data-i18n="safe.eyebrow">The guard</span></p>
+      <h2 id="safe-h2" data-i18n="safe.h2">The boundary is explicit</h2>
+      <ul class="safety-list">
+        <li><span class="guard-seal" aria-hidden="true">READ-ONLY</span><span data-i18n="safe.1">AI never executes. You approve every write.</span></li>
+        <li><span class="guard-seal" aria-hidden="true">LIMIT</span><span data-i18n="safe.4">Honest limits: unsigned installer, no auto-update; Firebird without row-edit/CSV, SQL Server without CSV.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INSTALL -->
+  <section class="section wrap railed gated ends" id="install" aria-labelledby="inst-h2">
+    <p class="eyebrow"><span class="tick" aria-hidden="true"></span><span data-i18n="inst.eyebrow">Run it</span></p>
+    <h2 id="inst-h2" data-i18n="inst.h2">Local install: installer or 4 steps</h2>
+    <div class="dl-panel">
+      <p class="step-label" data-i18n="inst.dl">No Node? Grab the installer</p>
+      <div class="codeblock"><code>DBLion Setup 0.1.0.exe · 133 MB · Windows x64</code><a class="btn btn-primary btn-sm" href="https://github.com/HyperTechDevelopment/DBLion/releases/latest" rel="noopener" data-i18n="inst.dlbtn">Download v0.1.0</a></div>
+      <p class="micro" data-i18n="inst.dlsha">SHA-256 EAD7FA952D3BF562B6E24D8904CCA8F44AD7BB550402CB18A8690749193AD323 · unsigned, so SmartScreen → More info → Run anyway.</p>
+      <div class="guard-line" aria-hidden="true">
+        <span class="guard-seal guard-seal-warn">LIMIT</span>
+      </div>
+    </div>
+    <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+    <ol class="steps">
+      <li>
+        <p class="step-label" data-i18n="inst.s1">1 · Clone the repo</p>
+        <div class="codeblock"><code data-i18n="inst.c1">git clone https://github.com/HyperTechDevelopment/DBLion.git</code><button class="copy" type="button" data-copy="git clone https://github.com/HyperTechDevelopment/DBLion.git" data-i18n="ui.copy" data-i18n-aria-label="ui.copyLabel" aria-label="Copy command">Copy</button></div>
+      </li>
+      <li>
+        <p class="step-label" data-i18n="inst.s2">2 · Install dependencies</p>
+        <div class="codeblock"><code data-i18n="inst.c2">npm ci</code><button class="copy" type="button" data-copy="npm ci" data-i18n="ui.copy" data-i18n-aria-label="ui.copyLabel" aria-label="Copy command">Copy</button></div>
+      </li>
+      <li>
+        <p class="step-label" data-i18n="inst.s3">3 · Start the app</p>
+        <div class="codeblock"><code data-i18n="inst.c3">npm run dev</code><button class="copy" type="button" data-copy="npm run dev" data-i18n="ui.copy" data-i18n-aria-label="ui.copyLabel" aria-label="Copy command">Copy</button></div>
+      </li>
+      <li>
+        <p class="step-label" data-i18n="inst.s4">4 · Build a release</p>
+        <div class="codeblock"><code data-i18n="inst.c4">npm run build &amp;&amp; npm run dist</code><button class="copy" type="button" data-copy="npm run build && npm run dist" data-i18n="ui.copy" data-i18n-aria-label="ui.copyLabel" aria-label="Copy command">Copy</button></div>
+      </li>
+    </ol>
+    <p class="micro" data-i18n="inst.note">No account, no telemetry, no auto-update. The installer stays unsigned for now.</p>
+  </section>
+  <!-- CLOSING -->
+  <section class="closing wrap" aria-labelledby="close-h2">
+    <h2 id="close-h2" data-i18n="close.h2">One guard, seven engines.</h2>
+    <p class="lede" data-i18n="close.sub">Read-only by default. The AI never executes.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://github.com/HyperTechDevelopment/DBLion/releases/latest" rel="noopener" data-i18n="hero.cta.primary">Download v0.1.0</a>
+      <a class="btn btn-ghost" href="https://github.com/HyperTechDevelopment/DBLion" rel="noopener" data-i18n="close.repo">Star the public repo</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="wrap footer-inner">
+    <p data-i18n="foot.license">MIT © Marcos Gabriel Moraes</p>
+    <p><a href="https://github.com/HyperTechDevelopment/DBLion" rel="noopener" data-i18n="foot.repo">github.com/HyperTechDevelopment/DBLion</a></p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

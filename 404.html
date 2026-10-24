@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found · DBLion</title>
+<meta name="description" content="This page does not exist. Return to the DBLion landing page.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" role="banner">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="DBLion home">
+      <img src="assets/logo.png" alt="DBLion lion logo" width="32" height="32">
+      <span class="brand-name">DBLion</span>
+    </a>
+    <button id="lang-toggle" class="btn btn-ghost btn-sm" type="button" aria-label="Switch language / Trocar idioma" data-i18n="nav.lang">PT</button>
+  </div>
+</header>
+
+<main id="main" class="section wrap error-page">
+  <p class="eyebrow"><span class="tick" aria-hidden="true"></span><span data-i18n="err.eyebrow">404 · off the map</span></p>
+  <h1 data-i18n="err.h1">This page does not exist.</h1>
+  <p class="lede" data-i18n="err.lede">The address may be mistyped or the page may have moved. The app itself lives on GitHub.</p>
+  <div class="hero-ctas">
+    <a class="btn btn-primary" href="index.html" data-i18n="err.home">Back to the page</a>
+    <a class="btn btn-ghost" href="https://github.com/HyperTechDevelopment/DBLion" rel="noopener" data-i18n="err.repo">GitHub repo</a>
+  </div>
+  <div class="guard-line" aria-hidden="true">
+    <code class="chip">SELECT * FROM pages WHERE url = ?</code>
+    <span class="guard-seal">0 ROWS</span>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="wrap footer-inner">
+    <p data-i18n="foot.license">MIT © Marcos Gabriel Moraes</p>
+    <p><a href="https://github.com/HyperTechDevelopment/DBLion" rel="noopener" data-i18n="foot.repo">github.com/HyperTechDevelopment/DBLion</a></p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
